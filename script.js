@@ -7,9 +7,20 @@ function inputLength() {
 	return input.value.length;
 }
 
+function removeParent(evt) {
+	evt.target.removeEventListener("click", removeParent, false);
+	evt.target.parentNode.remove();
+  }
+
 function createListElement() {
+	var btn = document.createElement("button");
+	btn.innerHTML = "Delete";
+	btn.onclick = removeParent;
+
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
+	li.appendChild(btn);
+	
 	ul.appendChild(li);
 	input.value = "";
 }
@@ -26,7 +37,6 @@ function addListAfterKeypress(event) {
 	}
 }
 
-//toggles the strike-through css to indicate done
 ul.onclick = function(event){
 		var target = event.target;
 		target.classList.toggle("done");
@@ -35,6 +45,5 @@ ul.onclick = function(event){
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
-
 
 
