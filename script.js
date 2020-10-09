@@ -1,7 +1,7 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var li = document.querySelector("li");
+const li = document.getElementsByTagName("li");
 
 function inputLength() {
 	return input.value.length;
@@ -26,14 +26,15 @@ function addListAfterKeypress(event) {
 	}
 }
 
-function doneToggle() {
-	
-}
+//toggles the strike-through css to indicate done
+ul.onclick = function(event){
+		var target = event.target;
+		target.classList.toggle("done");
+	}
 
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
 
-li.addEventListener("click, doneToggle");
 
 
