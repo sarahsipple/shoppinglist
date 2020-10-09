@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript + DOM</title>
+	<title>Shopping List</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 	<h1>Shopping List</h1>
-	<p id="first">Get it done today</p>
+	<p id="first">Everything to Buy Today</p>
 	<input id="userinput" type="text" placeholder="enter items">
-	<button id="enter">Enter</button>
+	<button id="enter">Add to List</button>
 	<ul>
-		<li class="bold red" random="23">Notebook</li>
-		<li>Jello</li>
-		<li>Spinach</li>
-		<li>Rice</li>
-		<li>Birthday Cake</li>
-		<li>Candles</li>
+		<li>Notebook <button><span class="material-icons">delete</span></button> </li>
+		<li>Jello <button><span class="material-icons">delete</span></button> </li>
+		<li>Spinach <button><span class="material-icons">delete</span></button> </li>
+		<li>Rice <button><span class="material-icons">delete</span></button> </li>
+		<li>Birthday Cake <button><span class="material-icons">delete</span></button> </li>
+		<li>Candles <button><span class="material-icons">delete</span></button> </li>
 	</ul>
 	<script type="text/javascript" src="script.js"></script>
 </body>
